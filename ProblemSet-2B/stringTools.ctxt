@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=stringTools
+comment0.text=\ \r\n\ Bradley\ Phan\r\n\ Sep\ 25\ 2024\r\n\ Problem\ set\ 2B\r\n
+comment1.params=sll
+comment1.target=java.lang.String\ lastLetter(java.lang.String)
+comment2.params=stfm
+comment2.target=java.lang.String\ formatNumber(java.lang.String)
+comment3.params=mt
+comment3.target=java.lang.String\ middleThree(java.lang.String)
+comment4.params=lt
+comment4.target=java.lang.String\ lastTwo(java.lang.String)
+comment5.params=fa\ n
+comment5.target=boolean\ fontAgain(java.lang.String,\ int)
+numComments=6
