@@ -34,7 +34,7 @@ public class Review {
             Scanner input = new Scanner(new File("positiveAdjectives.txt"));
             while(input.hasNextLine()){
                 String temp = input.nextLine().trim();
-                System.out.println(temp);
+                //System.out.println(temp);
                 posAdjectives.add(temp);
             }
             input.close();
@@ -179,43 +179,70 @@ public class Review {
 
     
     
-    
-    
     }
-    
+
     public static int starRating(String fileName){
-    double totalSentiment = totalSentiment(fileName);
-    
-    if (totalSentiment >= 10){
-    return 4;
-    } else if (totalSentiment >= 5){
-    return 3;
-    } else if (totalSentiment >0){
-    return 2;
-    } else {
-    return 1;
+        double totalSentiment = totalSentiment(fileName);
+
+        if (totalSentiment >= 10){
+            return 4;
+        } else if (totalSentiment >= 5){
+            return 3;
+        } else if (totalSentiment >0){
+            return 2;
+        } else {
+            return 1;
+        }
     }
-    }
-    
-    
+
     public static String fakeReview(String fileName){
-    String fakeReview = textToString(fileName);
-    
-    while(fakeReview.indexOf("*")!= -1){
-        int firstStar = fakeReview.indexOf("*");
-        int rest = fakeReview.indexOf("",firstStar);
-        
-        String first = fakeReview.substring(0,firstStar);
-        String remain = fakeReview.substring(rest);
-        
-        fakeReview = first + randomAdjective() + remain;
+        String fakeReview = textToString(fileName);
+
+        while(fakeReview.indexOf("*") >= 0){
+            int firstStar = fakeReview.indexOf("*");
+            int rest = fakeReview.indexOf(" ",firstStar);
+
+            String first = fakeReview.substring(0,firstStar);
+            String remain = fakeReview.substring(rest);
+
+            fakeReview = first + randomAdjective() + remain;
+        }
+
+        return fakeReview;
     }
     
-    return fakeReview;
+     public static String fakePositiveReview(String fileName){
+        String fakeReview = textToString(fileName);
+
+        while(fakeReview.indexOf("*") >= 0){
+            int firstStar = fakeReview.indexOf("*");
+            int rest = fakeReview.indexOf(" ",firstStar);
+
+            String first = fakeReview.substring(0,firstStar);
+            String remain = fakeReview.substring(rest);
+
+            fakeReview = first + randomPositiveAdj() + remain;
+        }
+
+        return fakeReview;
     }
     
-    
-    
+     public static String fakeNegativeReview(String fileName){
+        String fakeReview = textToString(fileName);
+
+        while(fakeReview.indexOf("*") >= 0){
+            int firstStar = fakeReview.indexOf("*");
+            int rest = fakeReview.indexOf(" ",firstStar);
+
+            String first = fakeReview.substring(0,firstStar);
+            String remain = fakeReview.substring(rest);
+
+            fakeReview = first + randomNegativeAdj() + remain;
+        }
+
+        return fakeReview;
+    }
+
     
     
 }
