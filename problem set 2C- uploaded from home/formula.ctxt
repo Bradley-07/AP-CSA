@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=formula
+comment0.text=\r\n\ Bradley\ Phan\r\n\ Oct\ 1\ 2024\r\n\ Problem\ set\ 2C\r\n
+comment1.params=a\ b\ c
+comment1.target=orderedPair\ quadraticF(double,\ double,\ double)
+comment2.params=a\ b\ c\ d
+comment2.target=orderedPair\ slopeFormula(double,\ double,\ double,\ double)
+comment3.params=a\ b\ c\ d
+comment3.target=orderedPair\ midPoint(double,\ double,\ double,\ double)
+comment4.params=a\ b\ c
+comment4.target=orderedPair\ arithmeticSum(double,\ double,\ double)
+comment5.params=a\ b\ c
+comment5.target=orderedPair\ geometricSum(double,\ double,\ double)
+comment6.params=a
+comment6.target=orderedPair\ Random(double)
+numComments=7
